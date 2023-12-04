@@ -16,7 +16,13 @@ uint8_t momentary_state(Event event, uint16_t arg) {
 
     // light up when the button is pressed; go dark otherwise
     // button is being held
-    if ((event & (B_CLICK | B_PRESS)) == (B_CLICK | B_PRESS)) {
+	
+    if (event == EV_click15_hold) {
+	    set_state(off_state, 0);
+	    return EVENT_HANDLED;
+    }
+	
+    else if ((event & (B_CLICK | B_PRESS)) == (B_CLICK | B_PRESS)) {
         momentary_active = 1;
         // 0 = ramping, 1 = strobes
         if (momentary_mode == 0) {
