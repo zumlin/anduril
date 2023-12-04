@@ -246,7 +246,7 @@ void setup() {
         push_state(channel_mode_state, 0);
         #endif
 
-        push_state(off_state, 1);
+        push_state(lockout_state, 0);
 
     #else  // if START_AT_MEMORIZED_LEVEL
 
