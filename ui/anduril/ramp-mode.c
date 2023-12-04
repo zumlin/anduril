@@ -467,7 +467,7 @@ uint8_t steady_state(Event event, uint16_t arg) {
 
     #ifdef USE_MOMENTARY_MODE
     // 5 clicks: shortcut to momentary mode
-    else if (event == EV_5clicks) {
+    else if (event == EV_click6_hold) {
         memorized_level = actual_level;  // allow turbo in momentary mode
         set_level(0);
         set_state(momentary_state, 0);
