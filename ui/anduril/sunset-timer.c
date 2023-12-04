@@ -37,7 +37,7 @@ uint8_t sunset_timer_state(Event event, uint16_t arg) {
                 sunset_timer_peak = sunset_timer;  // reset ceiling
                 sunset_ticks = 0;  // reset phase
                 // let the user know something happened
-                blink_once();
+                blip();
             }
         }
         return EVENT_HANDLED;
