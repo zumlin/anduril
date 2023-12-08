@@ -1,0 +1,5 @@
+git clone --single-branch --branch custom-settings https://github.com/zumlin/anduril.git
+cd anduril
+chmod -R 777 ./
+./make dfp
+./make zumlin
